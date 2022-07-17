@@ -14,10 +14,10 @@ rgb sin uso #8A8938*/
 * {
     padding: 0;
     margin: 0;
-   box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-html {
+#html {
     font-size: 62.5%;
     font-family: 'Oswald', sans-serif;
     background-color: #e1e1e0;
@@ -32,26 +32,33 @@ html {
 }
 
 .logo__style {
-    width: 40%;
-}
-
-.div__color--top {
-    background-color: rgba(33, 32, 32, 0.742);
     width: 100%;
 }
 
+.nav__bgcolor {
+    background-color: rgba(33, 32, 32, 0.553);
+    width: 100%;
+
+}
+
 .nav__style {
-    font-size: 1rem;
+    height: 20%;
+}
+
+.nav__style ul li a {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
 }
 
 .nav__style button {
-    background-color: transparent;
-    border: none;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     transition: 0.5s;
     cursor: pointer;
-} 
+    color: white;
+    border: none;
+}
 
 a {
     text-decoration: none;
@@ -72,6 +79,11 @@ a {
     transition: 300ms;
 }
 
+.nav__buscador {
+    font-weight: 300;
+    border-radius: 2px;
+}
+
 .aside__style {
     width: 100%;
     display: flex;
@@ -81,51 +93,71 @@ a {
     justify-items: center;
     align-items: center;
     margin-top: 2%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
+
 .aside__style p {
     background-color: #bfbd49a9;
     padding: 2%;
 }
 
 .aside__img {
-    width: 80%;
+    width: 75%;
 }
 
-h2,h3 {
+h2,
+h3 {
     background-color: #2c7877ed;
     font-size: 2rem;
     text-align: center;
     padding: 5px;
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 
 .section__ofertas {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     text-align: center;
 }
 
-.section__ofertas--div {
-    width: 98%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.section__ofertas--img {
-    width: 30%;
-    height: 20%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.ofertas__card--size {
+    width: 40%;
     margin: 5px;
 }
+
+.text__bold {
+    font-weight: bold;
+}
+
+.text__secondary {
+    font-size: 0.8rem;
+}
+
+.ofertas__card--contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 2px;
+}
+
+.ofertas__card--bg {
+    background: linear-gradient(#0000005c, #ffffffe0);
+}
+
+.reco__h5 {
+    background-color: #e5e1e1de;
+    font-size: 1.3rem;
+    padding: 3px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.reco__contenedor {
+    width: 70%;
+    margin: auto;
+}
+
 
 .footer__style {
     margin-top: 10px;
@@ -151,77 +183,84 @@ h2,h3 {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-/*GRID*/
-
-.div__contenedor {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-    "nav"
-    "aside"
-    "header"
-    "main"
-    "footer";
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
-.grid__area--nav {
-    grid-area: nav;
-}
 
-.grid__area--aside {
-    grid-area: aside;
-}
+@media screen and (min-width: 768px) {
 
-.grid__area--header {
-    grid-area: header;
-}
-
-.grid__area--main {
-    grid-area: main;
-}
-
-.grid__area--footer {
-    grid-area: footer;
-}
-
-/* @media */
-
-@media screen and (min-width: 768px){
-   
-    .logo__style{
-        width: 40%;
+    .logo__style {
+        width: 45%;
     }
 
-    .nav__ul--style{
+    .nav__ul--style {
         padding-left: 15px;
     }
 
-    .nav__style button{
-        font-size: 2.5rem;
+    .aside__style p {
+        font-size: 1.5rem;
     }
 
-    .aside__style p{
-        font-size: 3rem;
+    .aside__img {
+        width: 65%;
     }
 
-    h2,h3{
-        font-size: 4rem;
+    h2,
+    h3 {
+        font-size: 2.3rem;
         padding-bottom: 10px;
     }
 
-    .section__ofertas--img{
-        width: 20%;
-        height: 25%;
+    .ofertas__card--size {
+        width: 35%;
     }
 
-   .footer__style{
-    font-size: 2.5rem;
-   }
+    .text__bold {
+        font-size: 1.4rem;
+    }
 
-   .footer__style div img {
-    width: 20%;
+    .text__secondary {
+        font-size: 1.2rem;
+    }
+
+    .reco__contenedor {
+        width: 60%;
+    }
+
+    .footer__style--div {
+        font-size: 1.4rem;
+        padding-top: 5px;
+    }
+
+    .footer__style div img {
+        width: 20%;
+    }
+
 }
+
+@media screen and (min-width: 992px) {
+
+    .logo__style {
+        width: 100%;
+    }
+
+    .nav__style ul li a {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+
+    .aside__img {
+        width: 50%;
+
+    }
+
+    .ofertas__card--size {
+        width: 30%;
+    }
+
+
+
 }
 
 @media screen and (min-width: 1100px) {
@@ -229,24 +268,27 @@ h2,h3 {
         width: 10%;
     }
 
-    .section__ofertas--img{
+    .section__ofertas--img {
         width: 15%;
         height: 20%;
     }
 
-    .aside__img{
-        width: 70%;
+    .aside__img {
+        width: 50%;
     }
 
-}
-
-@media screen and (min-width: 1300px){
-    .aside__img {
+    .reco__contenedor {
         width: 40%;
     }
 
-    .logo__style {
-        width: 30%;
+    .ofertas__card--size {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .aside__img {
+        width: 40%;
     }
 
     .section__ofertas--img {
@@ -256,13 +298,28 @@ h2,h3 {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
+
     .footer__style div img {
         width: 10%;
     }
 
     html {
         overflow-x: hidden;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+    .ofertas__card--size {
+        width: 18%;
+    }
+
+    .logo__style {
+        width: 75%;
+    }
+
+    .footer__style {
+        margin-top: 20px;
     }
     
 }
@@ -279,10 +336,11 @@ h1 {
     width: 100%;
 }
 
-h4{
+h4 {
     font-size: 1.3rem;
 }
-.second__nav{
+
+.second__nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -292,7 +350,8 @@ h4{
     width: 100%;
     background-color: rgb(33 33 33 / 9%);
 }
- .second__nav div{
+
+.second__nav div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -303,7 +362,7 @@ h4{
     font-weight: 300;
     font-size: 1.3rem;
 
- }
+}
 
 .section__vinos--flex {
     display: flex;
@@ -321,7 +380,7 @@ h4{
     border-radius: 2px;
 }
 
-.section__vinos--flex figure{
+.section__vinos--flex figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -332,7 +391,8 @@ h4{
     border-radius: 5px;
 }
 
-.section__vinos--flex p,figcaption {
+.section__vinos--flex p,
+figcaption {
     color: rgb(247, 243, 243);
     background-color: #699493;
     font-size: 1.5rem;
@@ -344,34 +404,34 @@ h4{
 
 /*GRID VINOS*/
 
-.grid__contenedor--vinos{
+.grid__contenedor--vinos {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "filtros catalogo"
-    "filtros catalogo"
-    "footer-vinos footer-vinos";
+    grid-template-areas:
+        "filtros catalogo"
+        "filtros catalogo"
+        "footer-vinos footer-vinos";
 }
 
-.grid__area--filtros{
+.grid__area--filtros {
     grid-area: filtros;
 }
 
-.grid__area--catalogo{
+.grid__area--catalogo {
     grid-area: catalogo;
 }
 
-.grid__area--footer--vinos{
+.grid__area--footer--vinos {
     grid-area: footer-vinos;
 }
 
-@media screen and (min-width: 768px){
-    h4{
+@media screen and (min-width: 768px) {
+    h4 {
         font-size: 1.8rem;
     }
 
-    h1{
+    h1 {
         font-size: 2.5rem;
         padding-left: 15px;
     }
@@ -380,36 +440,38 @@ h4{
         font-size: 1.5rem;
         justify-content: space-between;
         padding: 5px 5px;
-        
+
     }
 
-    .section__vinos--flex p,figcaption {
+    .section__vinos--flex p,
+    figcaption {
         font-size: 1.7rem;
         padding: 5px;
-        border-radius: 5px; 
+        border-radius: 5px;
     }
-    
-    .section__vinos--flex figure{
+
+    .section__vinos--flex figure {
         border-radius: 10px;
         padding: 5px;
     }
 }
 
-@media screen and (min-width: 1100px){
-    .second__nav div{
+@media screen and (min-width: 1100px) {
+    .second__nav div {
         font-size: 1.8rem;
         padding-top: 10px;
     }
 
-    h4{
+    h4 {
         padding-top: 10px;
     }
 
-    .section__vinos--flex p,figcaption {
+    .section__vinos--flex p,
+    figcaption {
         font-size: 2rem;
     }
 
-    .section__vinos--flex figure{
+    .section__vinos--flex figure {
         border-radius: 12px;
         padding: 10px;
         width: 30%;
@@ -417,8 +479,8 @@ h4{
 
 }
 
-@media screen and (min-width: 1400px){
-    .section__vinos--flex figure{
+@media screen and (min-width: 1400px) {
+    .section__vinos--flex figure {
         width: 25%;
     }
 }
@@ -442,7 +504,7 @@ h4{
     border-radius: 2px;
 }
 
-.section__cervezas--flex figure{
+.section__cervezas--flex figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -453,7 +515,8 @@ h4{
     border-radius: 5px;
 }
 
-.section__cervezas--flex p,figcaption {
+.section__cervezas--flex p,
+figcaption {
     color: rgb(247, 243, 243);
     background-color: #699493;
     font-size: 1.5rem;
@@ -465,28 +528,28 @@ h4{
 
 /* GRID CERVEZAS */
 
-.grid__contenedor--cervezas{
+.grid__contenedor--cervezas {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "filtros catalogo";
+    grid-template-areas:
+        "filtros catalogo";
 }
 
-.grid__area--filtros{
+.grid__area--filtros {
     grid-area: filtros;
 }
 
-.grid__area--catalogo{
+.grid__area--catalogo {
     grid-area: catalogo;
 }
 
-@media screen and (min-width: 768px){
-    h4{
+@media screen and (min-width: 768px) {
+    h4 {
         font-size: 1.8rem;
     }
 
-    h1{
+    h1 {
         font-size: 2.5rem;
     }
 
@@ -494,36 +557,38 @@ h4{
         font-size: 1.5rem;
         justify-content: space-between;
         padding: 5px 5px;
-        
+
     }
 
-    .section__cervezas--flex p,figcaption {
+    .section__cervezas--flex p,
+    figcaption {
         font-size: 1.7rem;
         padding: 5px;
-        border-radius: 5px; 
+        border-radius: 5px;
     }
-    
-    .section__cervezas--flex figure{
+
+    .section__cervezas--flex figure {
         border-radius: 10px;
         padding: 5px;
     }
 }
 
-@media screen and (min-width: 1100px){
-    .second__nav div{
+@media screen and (min-width: 1100px) {
+    .second__nav div {
         font-size: 1.8rem;
         padding-top: 10px;
     }
 
-    h4{
+    h4 {
         padding-top: 10px;
     }
 
-    .section__cervezas--flex p,figcaption {
+    .section__cervezas--flex p,
+    figcaption {
         font-size: 2rem;
     }
 
-    .section__cervezas--flex figure{
+    .section__cervezas--flex figure {
         border-radius: 12px;
         padding: 10px;
         width: 30%;
@@ -531,8 +596,8 @@ h4{
 
 }
 
-@media screen and (min-width: 1400px){
-    .section__cervezas--flex figure{
+@media screen and (min-width: 1400px) {
+    .section__cervezas--flex figure {
         width: 25%;
     }
 }
@@ -556,7 +621,7 @@ h4{
     border-radius: 2px;
 }
 
-.section__espirituosas--flex figure{
+.section__espirituosas--flex figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -567,7 +632,8 @@ h4{
     border-radius: 5px;
 }
 
-.section__espirituosas--flex p,figcaption {
+.section__espirituosas--flex p,
+figcaption {
     color: rgb(247, 243, 243);
     background-color: #699493;
     font-size: 1.5rem;
@@ -579,28 +645,28 @@ h4{
 
 /* GRID ESPIRITUOSAS*/
 
-.grid__contenedor--espirituosas{
+.grid__contenedor--espirituosas {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "filtros catalogo";
+    grid-template-areas:
+        "filtros catalogo";
 }
 
-.grid__area--filtros{
+.grid__area--filtros {
     grid-area: filtros;
 }
 
-.grid__area--catalogo{
+.grid__area--catalogo {
     grid-area: catalogo;
 }
 
-@media screen and (min-width: 768px){
-    h4{
+@media screen and (min-width: 768px) {
+    h4 {
         font-size: 1.8rem;
     }
 
-    h1{
+    h1 {
         font-size: 2.5rem;
     }
 
@@ -608,37 +674,39 @@ h4{
         font-size: 1.5rem;
         justify-content: space-between;
         padding: 5px 5px;
-        
+
     }
 
-    .section__espirituosas--flex p,figcaption {
+    .section__espirituosas--flex p,
+    figcaption {
         font-size: 1.7rem;
         padding: 5px;
-        border-radius: 5px; 
+        border-radius: 5px;
     }
-    
-    .section__espirituosas--flex figure{
+
+    .section__espirituosas--flex figure {
         border-radius: 10px;
         padding: 5px;
     }
 }
 
-@media screen and (min-width: 1100px){
-   
-    .second__nav div{
+@media screen and (min-width: 1100px) {
+
+    .second__nav div {
         font-size: 1.8rem;
         padding-top: 10px;
     }
 
-    h4{
+    h4 {
         padding-top: 10px;
     }
 
-    .section__espirituosas--flex p,figcaption {
+    .section__espirituosas--flex p,
+    figcaption {
         font-size: 2rem;
     }
 
-    .section__espirituosas--flex figure{
+    .section__espirituosas--flex figure {
         border-radius: 12px;
         padding: 10px;
         width: 30%;
@@ -646,8 +714,8 @@ h4{
 
 }
 
-@media screen and (min-width: 1400px){
-    .section__espirituosas--flex figure{
+@media screen and (min-width: 1400px) {
+    .section__espirituosas--flex figure {
         width: 25%;
     }
 }
@@ -671,7 +739,7 @@ h4{
     border-radius: 2px;
 }
 
-.section__ofertas--flex figure{
+.section__ofertas--flex figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -682,7 +750,8 @@ h4{
     border-radius: 5px;
 }
 
-.section__ofertas--flex p,figcaption {
+.section__ofertas--flex p,
+figcaption {
     color: rgb(247, 243, 243);
     background-color: #699493;
     font-size: 1.5rem;
@@ -694,28 +763,28 @@ h4{
 
 /* GRID OFERTAS*/
 
-.grid__contenedor--ofertas{
+.grid__contenedor--ofertas {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "filtros catalogo";
+    grid-template-areas:
+        "filtros catalogo";
 }
 
-.grid__area--filtros{
+.grid__area--filtros {
     grid-area: filtros;
 }
 
-.grid__area--catalogo{
+.grid__area--catalogo {
     grid-area: catalogo;
 }
 
-@media screen and (min-width: 768px){
-    h4{
+@media screen and (min-width: 768px) {
+    h4 {
         font-size: 1.8rem;
     }
 
-    h1{
+    h1 {
         font-size: 2.5rem;
     }
 
@@ -723,37 +792,39 @@ h4{
         font-size: 1.5rem;
         justify-content: space-between;
         padding: 5px 5px;
-        
+
     }
 
-    .section__ofertas--flex p,figcaption {
+    .section__ofertas--flex p,
+    figcaption {
         font-size: 1.7rem;
         padding: 5px;
-        border-radius: 5px; 
+        border-radius: 5px;
     }
-    
-    .section__ofertas--flex figure{
+
+    .section__ofertas--flex figure {
         border-radius: 10px;
         padding: 5px;
     }
 }
 
-@media screen and (min-width: 1100px){
-   
-    .second__nav div{
+@media screen and (min-width: 1100px) {
+
+    .second__nav div {
         font-size: 1.8rem;
         padding-top: 10px;
     }
 
-    h4{
+    h4 {
         padding-top: 10px;
     }
 
-    .section__ofertas--flex p,figcaption {
+    .section__ofertas--flex p,
+    figcaption {
         font-size: 2rem;
     }
 
-    .section__ofertas--flex figure{
+    .section__ofertas--flex figure {
         border-radius: 12px;
         padding: 10px;
         width: 30%;
@@ -761,9 +832,8 @@ h4{
 
 }
 
-@media screen and (min-width: 1400px){
-    .section__ofertas--flex figure{
+@media screen and (min-width: 1400px) {
+    .section__ofertas--flex figure {
         width: 25%;
     }
 }
-
