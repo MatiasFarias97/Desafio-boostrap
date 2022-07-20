@@ -1,127 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moscato Vinoteca</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imagen" href="imagenes/favicon.png" />
 </head>
-<body>  
-    <nav class="nav__style">
-        <div class="div__color--top">
-            <a href="index.html">
-                <img src="imagenes/logomoscato.png" alt="Logo de Moscato vinoteca" class="logo__style">
+<header>
+    <nav class="navbar navbar-expand-lg nav__bgcolor nav__style header__font">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logomoscato.png" alt="" class="logo__style">
             </a>
-            <ul class="nav__ul--style">
-                <li>
-                    <button class="nav__button">
-                        <a href="vinos.html" class="text__white">Vinos</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="cervezas.html" class="text__white">Cervezas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="espirituosas.html" class="text__white">Espirituosas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="ofertas.html" class="text__white">Ofertas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="extras.html" class="text__white">Extras</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="contacto.html" class="text__white">Contacto</a>
-                    </button>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon boton__hamburguesa"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vinos.html">Vinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cervezas.html">Cervezas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Espirituosas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Extras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu bebida" aria-label="Search">
+                    <button class="btn btn-outline-success nav__buscador" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
     </nav>
-  <main>
-        <h1 class="text__white">Cervezas</h1> 
-        <div class="grid__contenedor--cervezas">
-        <nav class="second__nav grid__area--filtros">
-            <h4>Filtra tu busqueda</h4>
-            <div>
-                <label for="cerveza rubia">Rubia</label>
-                <input type="checkbox" id="cerveza rubia" name="cerveza rubia">
+</header>
+    <!-- Ends nav -->
+
+    <!-- Filtros -->
+<body id="html">
+    <h1 class="text__white">Cervezas</h1>
+    <div class="grid__contenedor---body">
+        <section class="collapse row" id="navbarToggleExternalContent">
+            <div class="p-4 bg__secondnav">
+                <div class="bg__secondnav--label">
+                    <label class="list-group-item ">
+                        <input class="form-check-input me-1" type="checkbox" value="Rubia">
+                        Rubia
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Roja">
+                        Roja
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Negra">
+                        Negra
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Ipa">
+                        Ipa
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Blanca">
+                        Blanca
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Honey">
+                        Honey
+                    </label>
+                </div>
             </div>
-            <div>
-                <label for="cerveza roja">Roja</label>
-                <input type="checkbox" id="cerveza roja" name="cerveza roja">
-            </div>
-            <div>
-                <label for="cerveza negra">Negra</label>
-                <input type="checkbox" id="cerveza negra" name="cerveza negra">
-            </div>
-                <div>
-                <label for="cerveza ipa">Ipa</label>
-                <input type="checkbox" id="cerveza ipa" name="cerveza ipa">
-            </div>
-            <div>
-                <label for="cerveza sin alcohol">Sin alcohol</label>
-                <input type="checkbox" id="cerveza sin alcohol" name="cerveza sin alcohol">
-            </div>
-            <div>
-                <label for="cerveza artesanal">Artesanal</label>
-                <input type="checkbox" id="cerveza artesanal" name="cerveza artesanal">
+        </section>
+        <nav class="navbar filtros__ocultar">
+            <div class="container-fluid">
+                <button class="boton__filtros" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span>Filtrar</span>
+                </button>
             </div>
         </nav>
-        <div>
-        <section class="section__cervezas--flex">
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza rubia</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza roja</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza negra</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza ipa</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza lager</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza ipa roja</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza honey</figcaption>
-                <p>$100</p>
-            </figure>
-            <figure class="main_figure--catalogo">
-                <img src="imagenes/catalogocerveza2.png" alt="Cerveza (Marca) 750ml" class="main__figure--imagenes">
-                <figcaption>Cerveza sin alcohol</figcaption>
-                <p>$100</p>
-            </figure>
+        <div class="bg__secondnav--label filtros__1400px grid__area--filtros">
+            <label class="list-group-item ">
+                <input class="form-check-input me-1" type="checkbox" value="Rubia">
+                Rubia
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Roja">
+                Roja
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Negra">
+                Negra
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Ipa">
+                Ipa
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Blanca">
+                Blanca
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Honey">
+                Honey
+            </label>
+        </div>
+
+        <!-- Termina filtros -->
+        <section class="contenedor__vinos container-fluid grid__area--productos">
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_cerveza.png" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">Corona 710cc</h5>
+                    <p class="card-text mt-2">$390</p>
+                </div>
+            </div>
         </section>
     </div>
-  </main>
+
+<script src="js/bootstrap.min.js"></script>
 </body>
 <footer class="footer__style .grid__area--footer grid__area--footer--vino">
     <a href="https://wa.link/emf33s">
@@ -144,4 +206,5 @@
     </a> 
 </div> -->
 </footer>
+
 </html>

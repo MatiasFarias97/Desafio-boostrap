@@ -6,129 +6,193 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moscato Vinoteca</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imagen" href="imagenes/favicon.png" />
 </head>
 
-<body>
-    <nav class="nav__style">
-        <div class="div__color--top">
-            <a href="index.html">
-                <img src="imagenes/logomoscato.png" alt="Logo de Moscato vinoteca" class="logo__style">
+<header>
+    <nav class="navbar navbar-expand-lg nav__bgcolor nav__style header__font">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logomoscato.png" alt="" class="logo__style">
             </a>
-            <ul class="nav__ul--style">
-                <li>
-                    <button class="nav__button">
-                        <a href="vinos.html" class="text__white">Vinos</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="cervezas.html" class="text__white">Cervezas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="espirituosas.html" class="text__white">Espirituosas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="ofertas.html" class="text__white">Ofertas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="extras.html" class="text__white">Extras</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="contacto.html" class="text__white">Contacto</a>
-                    </button>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon boton__hamburguesa"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vinos.html">Vinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cervezas.html">Cervezas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="espirituosas.html">Espirituosas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="extras.html">Extras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu bebida" aria-label="Search">
+                    <button class="btn btn-outline-success nav__buscador" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
     </nav>
-    <!-- Ends nav -->
-    <main>
-        <h1 class="text__white">Espirituosas</h1>
-        <div class="grid__contenedor--espirituosas">
-            <nav class="second__nav grid__area--filtros">
-                <h4>Filtra tu busqueda</h4>
-                <div>
-                    <label for="vodka">Vodka</label>
-                    <input type="checkbox" id="vodka" name="vodka">
+</header>
+</header>
+<!-- Ends nav -->
+
+<body id="html">
+    <h1 class="text__white">Espirituosas</h1>
+    <div class="grid__contenedor---body">
+        <section class="collapse row" id="navbarToggleExternalContent">
+            <div class="p-4 bg__secondnav">
+                <div class="bg__secondnav--label">
+                    <label class="list-group-item ">
+                        <input class="form-check-input me-1" type="checkbox" value="Vodka">
+                        Vodka
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Gin">
+                        Gin
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Fernet">
+                        Fernet
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Whisky">
+                        Whisky
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Licor">
+                        Licor
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Ron">
+                        Ron
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Tequila">
+                        Tequila
+                    </label>
                 </div>
-                <div>
-                    <label for="whisky">Whisky</label>
-                    <input type="checkbox" id="whisky" name="whisky">
-                </div>
-                <div>
-                    <label for="licores">Licores</label>
-                    <input type="checkbox" id="licores" name="licores">
-                </div>
-                <div>
-                    <label for="gin">Gin</label>
-                    <input type="checkbox" id="gin" name="gin">
-                </div>
-                <div>
-                    <label for="fernet">Fernet</label>
-                    <input type="checkbox" id="fernet" name="fernet">
-                </div>
-                <div>
-                    <label for="tequila">Tequila</label>
-                    <input type="checkbox" id="tequila" name="tequila">
-                </div>
-                <div>
-                    <label for="ron">Ron</label>
-                    <input type="checkbox" id="ron" name="ron">
-                </div>
-            </nav>
-            <div>
-                <section class="section__espirituosas--flex">
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Vodka</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Gin</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Fernet</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Licor</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Pisco</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Ron</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Whisky</figcaption>
-                        <p>$100</p>
-                    </figure>
-                    <figure>
-                        <img src="imagenes/catalogoespirituosas3.png" alt="Bebida blanca (Marca) 750ml">
-                        <figcaption>Whisky honey</figcaption>
-                        <p>$100</p>
-                    </figure>
-                </section>
             </div>
-    </main>
+        </section>
+        <nav class="navbar filtros__ocultar">
+            <div class="container-fluid">
+                <button class="boton__filtros" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span>Filtrar</span>
+                </button>
+            </div>
+        </nav>
+        <div class="bg__secondnav--label filtros__1400px grid__area--filtros">
+            <label class="list-group-item ">
+                <input class="form-check-input me-1" type="checkbox" value="Vodka">
+                Vodka
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Gin">
+                Gin
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Fernet">
+                Fernet
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Whisky">
+                Whisky
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Licor">
+                Licor
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Ron">
+                Ron
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Tequila">
+                Tequila
+            </label>
+        </div>
+
+        <!-- Termina filtros -->
+
+        <section class="contenedor__vinos container-fluid grid__area--productos">
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/catalogo_espirituosas.png" class="card-img-top" alt="Gin beefeater 750cc">
+                <div class="card-body">
+                    <h5 class="card-title">Gin Beefeater 750cc</h5>
+                    <p class="card-text mt-2">$4500</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 <footer class="footer__style .grid__area--footer grid__area--footer--vino">
     <a href="https://wa.link/emf33s">

@@ -6,124 +6,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moscato Vinoteca</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="imagen" href="imagenes/favicon.png" class="favicon" />
+    <link rel="icon" type="imagen" href="imagenes/favicon.png"/>
 </head>
 
-<body>
-    <nav class="nav__style">
-        <div class="div__color--top">
-            <a href="index.html">
-                <img src="imagenes/logomoscato.png" alt="Logo de Moscato vinoteca" class="logo__style">
+<header>
+    <nav class="navbar navbar-expand-lg nav__bgcolor nav__style header__font">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logomoscato.png" alt="" class="logo__style">
             </a>
-            <ul class="nav__ul--style">
-                <li>
-                    <button class="nav__button">
-                        <a href="vinos.html" class="text__white">Vinos</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="cervezas.html" class="text__white">Cervezas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="espirituosas.html" class="text__white">Espirituosas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="ofertas.html" class="text__white">Ofertas</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="extras.html" class="text__white">Extras</a>
-                    </button>
-                </li>
-                <li>
-                    <button class="nav__button">
-                        <a href="contacto.html" class="text__white">Contacto</a>
-                    </button>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon boton__hamburguesa"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="vinos.html">Vinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cervezas.html">Cervezas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Espirituosas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="extras.html">Extras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu bebida" aria-label="Search">
+                    <button class="btn btn-outline-success nav__buscador" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
     </nav>
-    <!-- Ends nav -->
-        <main>
-            <h1 class="text__white">Vinos</h1>
-            <div class="grid__contenedor--vinos">
-            <nav class="second__nav grid__area--filtros">
-                <h4>Filtra tu busqueda</h4>
-                <div>
-                    <label for="vino malbec">Malbec</label>
-                    <input type="checkbox" id="vino malbec" name="vino malbec">
+</header>
+<!-- Ends nav -->
+
+<!-- Filtros -->
+
+<body id="html">
+    <h1 class="text__white">Vinos</h1>
+    <div class="grid__contenedor---body">
+        <section class="collapse row" id="navbarToggleExternalContent">
+            <div class="p-4 bg__secondnav">
+                <div class="bg__secondnav--label">
+                    <label class="list-group-item ">
+                        <input class="form-check-input me-1" type="checkbox" value="Malbec">
+                        Malbec
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Cabernet sauvignon">
+                        Cabernet sauvignon
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Vino espumante">
+                        Espumante
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Chenin dulce">
+                        Chenin dulce
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Merlot">
+                        Merlot
+                    </label>
+                    <label class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="Torrontes">
+                        Torrontes
+                    </label>
                 </div>
-                <div>
-                    <label for="vino cabernet sauvignon">Cabernet sauvignon</label>
-                    <input type="checkbox" id="vino cabernet sauvignon" name="vino cabernet sauvignon">
-                </div>
-                <div>
-                    <label for="vino merlot">Merlot</label>
-                    <input type="checkbox" id="vino merlot" name="vino merlot">
-                </div>
-                    <div>
-                    <label for="vino pinot noir">Pinot noir</label>
-                    <input type="checkbox" id="vino pinot noir" name="vino pinot noir">
-                </div>
-                <div>
-                    <label for="vino blanco dulce">Blanco dulce</label>
-                    <input type="checkbox" id="vino blanco dulce" name="vino blanco dulce">
-                </div>
-                <div>
-                    <label for="vino chardonay">Chardonay</label>
-                    <input type="checkbox" id="vino chardonay" name="vino chardonay">
-                </div>
-                <div>
-                    <label for="vino torrontes">Torrontes</label>
-                    <input type="checkbox" id="vino torrontes" name="vino torrontes">
-                </div>
-            </nav>
-            <div class="section__vinos--flex grid__area--catalogo">
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino malbec</figcaption>
-                    <p>$100</p>
-                </figure>
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino cabernet sauvignon</figcaption>
-                    <p>$100</p>
-                </figure>
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino merlot</figcaption>
-                    <p>$100</p>
-                </figure>
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino pinot noir</figcaption>
-                    <p>$100</p>
-                </figure>
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino chenin dulce</figcaption>
-                    <p>$100</p>
-                </figure>
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino torrontes</figcaption>
-                    <p>$100</p>
-                </figure>
-                <figure>
-                    <img src="imagenes/la_linda_malbec.jpg" alt="Vino (Marca) 750ml">
-                    <figcaption>Vino syrah</figcaption>
-                    <p>$100</p>
-                </figure>
             </div>
+        </section>
+        <nav class="navbar filtros__ocultar">
+            <div class="container-fluid">
+                <button class="boton__filtros" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span>Filtrar</span>
+                </button>
+            </div>
+        </nav>
+        <div class="bg__secondnav--label filtros__1400px grid__area--filtros">
+            <label class="list-group-item ">
+                <input class="form-check-input me-1" type="checkbox" value="Malbec">
+                Malbec
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Cabernet sauvignon">
+                Cabernet sauvignon
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Vino espumante">
+                Espumante
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Chenin dulce">
+                Chenin dulce
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Merlot">
+                Merlot
+            </label>
+            <label class="list-group-item">
+                <input class="form-check-input me-1" type="checkbox" value="Torrontes">
+                Torrontes
+            </label>
+        </div>
+
+        <!-- Termina filtros -->
+
+        <section class="contenedor__vinos container-fluid grid__area--productos">
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+            <div class="card card__productos">
+                <img src="imagenes/la_linda_malbec.jpg" class="card-img-top" alt="Vino la linda malbec $1100">
+                <div class="card-body">
+                    <h5 class="card-title">La linda malbec</h5>
+                    <p class="card-text mt-2">$1100</p>
+                </div>
+            </div>
+        </section>
     </div>
-    </main>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 <footer class="footer__style .grid__area--footer grid__area--footer--vino">
     <a href="https://wa.link/emf33s">

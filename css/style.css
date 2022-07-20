@@ -36,7 +36,7 @@ rgb sin uso #8A8938*/
 }
 
 .nav__bgcolor {
-    background-color: rgba(33, 32, 32, 0.553);
+    background-color: #2120208d;
     width: 100%;
 
 }
@@ -49,6 +49,12 @@ rgb sin uso #8A8938*/
     font-size: 1.5rem;
     color: white;
     font-weight: 400;
+}
+
+.boton__hamburguesa{
+    background-image: url(../imagenes/boton_hamburguesa.svg);
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .nav__style button {
@@ -340,149 +346,150 @@ h4 {
     font-size: 1.3rem;
 }
 
-.second__nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    justify-items: center;
-    padding: 10px 10px;
-    width: 100%;
-    background-color: rgb(33 33 33 / 9%);
+.bg__secondnav{
+
+    background-color: #79aeae52;
 }
 
-.second__nav div {
+.bg__secondnav--label{
+    background-color: #21212117;
+}
+
+.boton__filtros{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 10px;
-    font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: #ebe9e9e1;
+}
+
+.boton__filtros:hover{
+    background: linear-gradient( 180deg,#0000005c, #ffffffe0)
+}
+
+.p-4 label{
+    margin-bottom: 5px;
+    font-size: 1rem;
 
 }
 
-.section__vinos--flex {
+.header__font{
+    font-family: 'Oswald', sans-serif;
+}
+
+.contenedor__vinos{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin: 10px auto;
-    padding: 10px;
-    align-items: center;
-}
-
-.section__vinos--flex img {
-    width: 100%;
-    border-radius: 2px;
-}
-
-.section__vinos--flex figure {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    width: 40%;
-    margin: 10px;
-    background-color: #2c7877;
+}
+
+.card__productos{
+    width: 45%;
+    margin: 5px auto;
     padding: 5px;
-    border-radius: 5px;
+    background: #fffefeb3;
+
 }
 
-.section__vinos--flex p,
-figcaption {
-    color: rgb(247, 243, 243);
-    background-color: #699493;
-    font-size: 1.5rem;
-    font-weight: 300;
+h5{
+    font-weight: 400;
+}
+
+.contenedor__vinos div h5,p{
+    margin: auto;
     text-align: center;
-    margin: 2px auto;
-    padding: 2px;
+    
 }
 
-/*GRID VINOS*/
-
-.grid__contenedor--vinos {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "filtros catalogo"
-        "filtros catalogo"
-        "footer-vinos footer-vinos";
+.contenedor__vinos div p{
+    font-size: 1rem;
+    font-weight: 300;
+    
 }
 
-.grid__area--filtros {
-    grid-area: filtros;
-}
-
-.grid__area--catalogo {
-    grid-area: catalogo;
-}
-
-.grid__area--footer--vinos {
-    grid-area: footer-vinos;
+.filtros__1400px{
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
-    h4 {
-        font-size: 1.8rem;
-    }
+    
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-left: 15px;
     }
 
-    .second__nav div {
-        font-size: 1.5rem;
-        justify-content: space-between;
-        padding: 5px 5px;
-
-    }
-
-    .section__vinos--flex p,
-    figcaption {
-        font-size: 1.7rem;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    .section__vinos--flex figure {
-        border-radius: 10px;
-        padding: 5px;
+    .card__productos{
+        width: 32%;
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
+   
     .second__nav div {
         font-size: 1.8rem;
         padding-top: 10px;
     }
 
-    h4 {
-        padding-top: 10px;
-    }
 
-    .section__vinos--flex p,
-    figcaption {
-        font-size: 2rem;
-    }
+   .card__productos{
+    width: 27%;
 
-    .section__vinos--flex figure {
-        border-radius: 12px;
-        padding: 10px;
-        width: 30%;
-    }
+   }
 
 }
 
+@media screen and (min-width: 1200px){
+
+    .card__productos{
+        width: 23%;
+    
+       }
+}
+
 @media screen and (min-width: 1400px) {
-    .section__vinos--flex figure {
-        width: 25%;
+    
+    h1{
+        font-size: 2.4rem;
     }
+
+    .card__productos{
+        width: 27%;
+    
+       }
+
+    .filtros__1400px{
+        display: block;
+        padding: 5px 10px;
+        font-size: 1.3rem;
+        margin: 10px;
+    }
+
+    .filtros__1400px label{
+
+        margin: 15px;
+    }
+
+    .filtros__ocultar{
+        display: none;
+    }
+
+    .grid__contenedor---body{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: 
+        "filtros productos";
+    }
+
+    .grid__area--filtros{
+        grid-area: filtros;
+
+    }
+
+    .grid__area--productos{
+        grid-area: productos;
+    }
+    
 }
 
 /* TERMINA SECCION VINOS Y EMPIEZA CERVEZAS*/
@@ -549,16 +556,7 @@ figcaption {
         font-size: 1.8rem;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .second__nav div {
-        font-size: 1.5rem;
-        justify-content: space-between;
-        padding: 5px 5px;
-
-    }
+    
 
     .section__cervezas--flex p,
     figcaption {
@@ -574,6 +572,7 @@ figcaption {
 }
 
 @media screen and (min-width: 1100px) {
+    
     .second__nav div {
         font-size: 1.8rem;
         padding-top: 10px;
@@ -666,9 +665,6 @@ figcaption {
         font-size: 1.8rem;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
 
     .second__nav div {
         font-size: 1.5rem;
@@ -782,10 +778,6 @@ figcaption {
 @media screen and (min-width: 768px) {
     h4 {
         font-size: 1.8rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
     }
 
     .second__nav div {
