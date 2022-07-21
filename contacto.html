@@ -6,90 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moscato Vinoteca</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imagen" href="imagenes/favicon.png" />
 </head>
-<!-- "fieldset" encierra en una cajita
-"checkbox" te deja seleccionar mas de una opcion
-"label" representa una etiqueta para un elemento en una interfaz de usuario.
-"input" cajita donde podemos escribir y definimos que caracteres acepta en "type"
-agregamos "id" que coincida con "for" para una mejor accesibilidad
-"placeholder" mensaje mas claro que ayuda a saber como completar la informacion
- -->
 
-<body>
-    <nav>
-        <a href="index.html">
-            <img src="imagenes/moscatovinoteca.png" alt="Logo de Moscato vinoteca" class="nav__logo">
-        </a>
-        <ul class="nav__ul">
-            <li>
-                <a href="vinos.html" class="titulos">Vinos</a>
-            </li>
-            <li>
-                <a href="cervezas.html" class="titulos">Cervezas</a>
-            </li>
-            <li>
-                <a href="espirituosas.html" class="titulos">Espirituosas</a>
-            </li>
-            <li>
-                <a href="ofertas.html" class="titulos">Ofertas</a>
-            </li>
-            <li>
-                <a href="extras.html" class="titulos">Extras</a>
-            </li>
-            <li>
-                <a href="contacto.html" class="titulos">Contacto</a>
-            </li>
-        </ul>
+<body id="html">
+    <nav class="navbar navbar-expand-lg nav__bgcolor nav__style">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagenes/logomoscato.png" alt="" class="logo__style">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon boton__hamburguesa"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vinos.html">Vinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cervezas.html">Cervezas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Espirituosas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="espirituosas.html">Extras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca tu bebida" aria-label="Search">
+                    <button class="btn btn-outline-success nav__buscador" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
     </nav>
+
     <!-- Ends nav -->
     <main>
-        <h1>Contacto</h1>
-        <section class="form__section--style">
-            <form action="">
-                <fieldset>
-                    <legend>
-                        <h2>¿Tienes 18 años o mas?</h2>
-                        <label for="edad">Si</label>
-                        <input type="radio" id="edad" name="edad">
-                        <label for="edad">No</label>
-                        <input type="radio" id="edad" name="edad">
-                    </legend>
-                </fieldset>
-                <label for="nombre">Nombre y apellido</label>
-                <input type="text" id="nombre">
-                <label for="email">Email</label>
-                <input type="email" id="email">
-                <label for="telefono">Telefono</label>
-                <input type="telefono" id="telefono">
-                <fieldset>
-                    <label for="via de contacto">Te contactaremos por</label>
-                    <select name="via de contacto" id="via de contacto">
-                        <option value="email">Email</option>
-                        <option value="telefono">Mensaje de texto</option>
-                    </select>
-                </fieldset>
-                <label for="mensaje">Mensaje</label>
-                <textarea name="" id="mensaje" cols="30" rows="10"></textarea>
-                <input type="reset" value="Cancelar">
-                <input type="submit" value="Enviar">
+        <h1 class="text__white">Contacto</h1>
+        <div class="container--flex">
+            <form class="form">
+                <div class="form__container">
+                    <h2 class="text__white">Envianos tu comentario</h2>
+                    <input type="text" class="form__input" placeholder="Nombre">
+                    <input type="mail" class="form__input" placeholder="Email">
+                    <textarea class="form__input form__input--texto" placeholder="Deja tu mensaje..."></textarea>
+                    <input type="submit" value="Enviar formulario" class="btn__submit">
+                </div>
             </form>
-            <!-- ends form -->
-        </section>
+            <section class="section__mapa">
+                <h2 class="text__white">¡Vení a conocernos!</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.822360210621!2d-64.21062738492478!3d-31.363880881421668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299100cd22561%3A0xc14b429c255f8173!2sMoscato!5e0!3m2!1ses!2sar!4v1655329818366!5m2!1ses!2sar"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
     </main>
+    <script src="js/bootstrap.min.js"></script>
 </body>
-<footer class="footer__style">
-    <section>
-        <h3>Tel: 3512068566</h3>
-        <a href="https://www.instagram.com/moscatovinoteca" target="_blank">
-            <img src="imagenes/instagramlogo.png" alt="Instagram de moscato vinoteca">
-        </a>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.822360210621!2d-64.21062738492478!3d-31.363880881421668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299100cd22561%3A0xc14b429c255f8173!2sMoscato!5e0!3m2!1ses!2sar!4v1655329818366!5m2!1ses!2sar"
-            width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <!-- mapa de google maps -->
-    </section>
-</footer>
+<footer class="footer__style .grid__area--footer grid__area--footer--vino">
+    <a href="https://wa.link/emf33s">
+        <div class="footer__style--div">
+            <img src="imagenes/whatsapp.svg" alt="Whatsapp del local">
+            <p class="text__white">3512068566</p>
+
+        </div>
+    </a>
+    <a href="https://www.instagram.com/moscatovinoteca" target="_blank">
+        <div class="footer__style--div">
+            <img src="imagenes/instagram.svg" alt="Instagram de moscato vinoteca">
+            <p class="text__white">@moscatovinoteca</p>
+        </div>
+    </a>
+    <!-- <div>
+    <a href="https://goo.gl/maps/rGuPQH4xYirKvTnp6" target="_blank">
+        <img src="imagenes/ubicacion.svg" alt="Ubiacion del local">
+        <p class="text__white">Lascano Colodrero 2765</p>
+    </a> 
+</div> -->
 
 </html>

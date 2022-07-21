@@ -100,6 +100,7 @@ a {
     align-items: center;
     margin-top: 2%;
     font-size: 1.2rem;
+    padding-right: 20px;
 }
 
 .aside__style p {
@@ -258,6 +259,7 @@ h3 {
 
     .aside__img {
         width: 50%;
+
 
     }
 
@@ -827,5 +829,91 @@ figcaption {
 @media screen and (min-width: 1400px) {
     .section__ofertas--flex figure {
         width: 25%;
+    }
+}
+
+/* EMPIEZA CONTACTO */
+
+.container--flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.form{
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+    margin: auto;
+    background-color: #21212117;
+}
+
+.form__container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.form__container h2{
+    font-size: 1.5rem;
+}
+
+.form__input{
+    font-size: 1rem;
+    padding: 0.8em 1em;
+    
+}
+
+.form__input--texto{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: .5em;
+}
+
+.btn__submit{
+    border: none;
+    font-size: 1rem;
+    padding: .7em 0;
+    cursor: pointer;
+    border-radius: .2em;
+    
+}
+
+.section__mapa{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 2.5em 1.5em;
+    background-color: #21212117;
+}
+
+.section__mapa h2{
+    margin: 10px auto;
+    font-size: 1.5rem;
+}
+
+.section__mapa iframe{
+    width: 100%;
+}
+
+@media screen and (min-width: 1100px){
+
+    .container--flex{
+        flex-direction: row;
+    }
+
+    .form{
+        width: 50%;
+    }
+
+    .section__mapa{
+        width: 50%;
+    }
+
+    .section__mapa iframe{
+        height: 300px;
     }
 }
